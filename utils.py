@@ -36,7 +36,7 @@ class LR_Lambda:
         self.epoch = lr_decay_epoch
     
     def __call__(self, epoch):
-        if epoch >= self.lr_decay_epoch:
+        if epoch >= self.epoch:
             self.epoch += self.lr_decay_epoch
             return self.lr_decay_rate
         else:
