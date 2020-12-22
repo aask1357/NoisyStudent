@@ -1,6 +1,9 @@
 # NoisyStudent
 A PyTorch implementation of [Self-training with Noisy Student improves ImageNet classification](https://arxiv.org/abs/1911.04252)
 
+# Requirements
+Python >= 3.6, pytorch, torchvision, matplotlib, numpy, tensorboardX, tqdm
+
 # Usage
 <pre><code>$ python train.py -c config.json</code></pre> 
 
