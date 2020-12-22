@@ -1,0 +1,35 @@
+{
+    "train_config": {
+        "output_dir": "checkpoint",
+        "model_name": "test",
+        "batch_size": 256,
+        "num_workers": 4,
+        "augment_epoch": 100,
+        "unaugment_epoch": 2,
+        "device": "cuda",
+        "label_type": "soft",
+        "confidence": 0.3,
+        "num_classes": 10,
+        "epochs_per_save": 50,
+        "teacher_noise": true
+    },
+    "data_config": {
+        "N": 2,
+        "M": 9,
+        "dataset": "stl10",
+        "dataset_dir": "/home/practice/datasets"
+    },
+    "model_config": {
+        "teacher_path": "",
+        "student_path": "",
+        "dropout_prob": 0.3,
+        "stochastic_depth_prob": 0.5,
+        
+        "models": ["resnet18", "resnet26", "resnet34"],
+        "epochs": [600, 600, 600],
+        "ratio": [0, 3, 6],
+        "learning_rate": [0.03, 0.1, 0.1],
+        "lr_decay_rate": [0.01, 0.3, 0.3],
+        "lr_decay_epoch": [200, 200, 200]
+    }
+}
