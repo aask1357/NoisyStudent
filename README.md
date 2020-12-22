@@ -2,9 +2,9 @@
 A PyTorch implementation of [Self-training with Noisy Student improves ImageNet classification](https://arxiv.org/abs/1911.04252)
 
 # Usage
-<pre><code>{
+<pre><code>
 $python train.py -c config.json
-}</code></pre> 
+</code></pre> 
 
 # Implementation details
 * We tested on STL10 dataset, downsized to 32x32
@@ -15,9 +15,9 @@ $python train.py -c config.json
 # Parameters
 To change parameters, you can modify config.json file, or give -p arguements.
 For example, if you want to change batch size to 128 and label type to hard,
-<pre><code>{
+<pre><code>
 $python train.py -c config.json -p model_config.batch_size=128 model_config.label_type="hard"
-}</code></pre> 
+</code></pre> 
 
 * augment_epoch, unaugment_epoch: in the [paper](https://arxiv.org/abs/1911.04252), authors used [a technique to fix train-test resolution discrepancy](https://arxiv.org/abs/1906.06423). They perform normal training with augmented dataset for 350 epochs(augment_epoch), and finetune with unaugmented dataset for 1.5 epochs(unaugment_epoch).
 * label_type: "soft" or "hard". Used when pseudo-labeling unlabeled data.
