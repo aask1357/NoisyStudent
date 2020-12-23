@@ -8,8 +8,9 @@ Python >= 3.6, pytorch, torchvision, matplotlib, numpy, tensorboardX, tqdm
 <pre><code>$ python train.py -c config.json</code></pre> 
 
 # Implementation details
-* We tested on STL10 dataset, downsized to 32x32
+* We tested on STL10 dataset
 * Model: Resnet18->Resnet26->Resnet34
+* accuracy: 75.1750%->77.3625%->78.3125%
 * For data noise, RandAugment is used.
 * For model noise, dropout and stochastic depth are used.
 
