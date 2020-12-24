@@ -24,11 +24,11 @@ def load_dataset(N, M, dataset, dataset_dir):
     M: Magnitude for all the transformations.'''
     transform_randaugment = transforms.Compose([
         RandAugment(N, M),
-        transforms.Resize(32),
+        #transforms.Resize(32),
         transforms.ToTensor(),
     ])
     transform_resize = transforms.Compose([
-        transforms.Resize(32),
+        #transforms.Resize(32),
         transforms.ToTensor(),
     ])
     
