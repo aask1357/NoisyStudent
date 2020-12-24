@@ -1,6 +1,5 @@
 pytorch
 torchvision
 numpy
-matplotlib
 tensorboardX
 tqdm
